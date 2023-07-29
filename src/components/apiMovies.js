@@ -18,3 +18,7 @@ export const fetchCast = async (movieId) => {
 export const fetchReviews = async (movieId) => {
     return await axios.get(`movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US`);
 }
+
+export const fetchMovies = async (query) => {
+    return await axios.get(`search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1`);
+}

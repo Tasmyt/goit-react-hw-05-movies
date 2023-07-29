@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
+import { List } from "./MovieItem.styled";
+
 export const MovieItem = ({ tranding }) => {    
     return (        
     <>
       {tranding.map(({ id, title }) => (
-        <li key={id}>
+        <List key={id}>
               <Link to={`/movies/${id}`}>
                   {title}
               </Link>;
-        </li>
+        </List>
       ))}
     </>
   );
